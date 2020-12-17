@@ -1,0 +1,38 @@
+{
+  "name": "as-ulid",
+  "version": "0.0.1",
+  "description": "ULID library for AssemblyScript",
+  "main": "index.js",
+  "scripts": {
+    "build:debug": "asc assembly/ulid.ts --target debug",
+    "build:release": "asc assembly/ulid.ts --target release",
+    "build:test": "npm run build && npm run test",
+    "build": "npm run build:debug && npm run build:release",
+    "clean": "rimraf build/debug *.tar.gz",
+    "test": "node tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:azam/as-ulid.git"
+  },
+  "keywords": [
+    "ulid",
+    "assemblyscript",
+    "webassembly",
+    "wasm"
+  ],
+  "author": "azam <azamshul@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azam/as-ulid/issues"
+  },
+  "homepage": "https://github.com/azam/as-ulid#readme",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.17.7"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.17.7",
+    "benchmark": "^2.1.4",
+    "rimraf": "^3.0.2"
+  }
+}
